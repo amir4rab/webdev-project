@@ -1,0 +1,40 @@
+//** white colors **//
+$white-0: #ddf7fc;
+$white-0-25: transparentize($white-0, .75);
+$white-0-50: transparentize($white-0, .5);
+$white-0-75: transparentize($white-0, .25);
+
+//** black colors **//
+$black-0: #001f25;
+$black-1: #1F1F1F;
+$black-2: #252525;
+$lightenBlack: lighten( $black-1, 7.5);
+
+//** light grey colors **//
+$grey-0: #B8B8B8;
+
+//** accent colors **//
+$highlight-color: #0091AD;
+$highlight-light: #0091AD;
+
+
+//** event colors **//
+$red-0: #eb2529;
+$yellow-0: #F2C94C;
+$green-0: #38B000;
+
+
+//* colors config *//
+$color-black: $black-0;
+$color-white: $white-0;
+$color-gray-light: rgba($color-white, .15);
+$color-gray-dark: rgba($color-black, .15);
+
+
+$highlight-light-inner: $highlight-color; 
+$highlight-dark-inner: $highlight-color;
+
+$background: var(--color-page-background);
+$secBackground: var(--color-page-background-diff);
+$text: var(--color-text);
+$highlight: var(--color-highlight);

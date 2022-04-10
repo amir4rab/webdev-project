@@ -1,0 +1,85 @@
+// @mixin button( $color, $bgColor ) {
+//   background: $bgColor;
+//   color: $color;
+//   border: none;
+//   transition: opacity .3s ease-in-out;
+//   &:hover {
+//     cursor: pointer;
+//   }
+//   &:hover, &:focus {
+//     background: lighten( $bgColor, 5 );
+//   }
+//   &:active {
+//     background: lighten( $bgColor, 7.5 );
+//   }
+//   &:disabled {
+//     background: lighten( $bgColor, 7.5);
+//     opacity: .5;
+//     cursor: default;
+//   }
+// }
+
+// @mixin buttonShadow( $shadowColor ) {
+//   transition: box-shadow .3s ease-in-out;
+//   box-shadow: 0 0 1rem transparent;
+//   &:hover, &:focus {
+//     box-shadow: 0 0 1rem $shadowColor;
+//   }
+// }
+
+// @mixin largeBtn {
+//   padding: .6em 1.25em;
+//   font-size: 1rem;
+// }
+
+// .buttonDark {
+//   @include button($white-0, $black-1);
+// }
+
+// .buttonDarkL {
+//   @include button($white-0, $black-1);
+//   @include largeBtn;
+// }
+
+// .buttonBlockDark2{
+//   @include button($white-0, $black-2);
+//   border-radius: 0;
+//   font-size: 1.15rem;
+//   width: 100%;
+//   height: 100%
+// }
+
+// .buttonWhite {
+//   @include button($black-1, $white-0);
+// } 
+
+// .buttonWhiteL {
+//   @include button($black-1, $white-0);
+//   @include largeBtn;
+// }
+
+// .buttonRed {
+//   @include button($white-0, $red-0);
+// }
+// .buttonRedL {
+//   @include button($white-0, $red-0);
+//   @include largeBtn;
+// }
+
+// .buttonGreen {
+//   @include button($black-1, $green-0);
+// }
+// .buttonGreenL {
+//   @include button($black-1, $green-0);
+//   @include largeBtn;
+// }
+
+// .buttonPrimary {
+//   @include button($black-1, $highlight);
+//   @include buttonShadow($highlight)
+// }
+// .buttonPrimaryL {
+//   @include button($black-1, $highlight);
+//   @include largeBtn;
+//   @include buttonShadow($highlight)
+// }

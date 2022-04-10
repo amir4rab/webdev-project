@@ -1,0 +1,15 @@
+@import './_abstracts/colors';
+
+:root {
+  --color-page-background: #{$color-white};
+  --color-page-background-diff: #{darken($color-white, 15)};
+  --color-text: #{$color-black};
+  --color-highlight: #{$highlight-light-inner};
+}
+
+.dark {
+  --color-page-background: #{$color-black};
+  --color-page-background-diff: #{lighten($color-black, 15)};
+  --color-text: #{$color-white};
+  --color-highlight: #{$highlight-dark-inner};
+}

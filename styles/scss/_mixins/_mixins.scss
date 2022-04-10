@@ -1,0 +1,51 @@
+@import './breakpointmixins', './functions';
+
+
+@mixin title($mFontSize: 3rem,$dFontSize: 5rem) {
+  font-size: $mFontSize;
+  color: $highlight;
+  cursor: default;
+  user-select: none;
+  transition: text-shadow .3s ease-in-out;
+  text-shadow: 0 0 1rem transparent;
+  &:hover, &:focus {
+    text-shadow: 0 0 1rem transparentize( $highlight, .5 );
+  }
+  @include forDesktopUp {
+    font-size: $dFontSize;
+  }
+}
+
+@mixin textImg( $size ) {
+  width: $size;
+  height: $size;
+  padding: calc($size/5);
+  border-radius: 50%;
+  background: $highlight;
+  color: $black-0;
+  display: flex;
+  font-size: calc($size/2);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  user-select: none;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: transparentize( $highlight, .5 );
+    border-radius: .4rem;
+  }
+  overflow-y: auto;
+  overflow-x: auto;
+}
