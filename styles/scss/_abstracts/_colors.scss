@@ -1,12 +1,13 @@
 //** white colors **//
 $white-0: #ddf7fc;
+$white-1: #b9eaf5;
 $white-0-25: transparentize($white-0, .75);
 $white-0-50: transparentize($white-0, .5);
 $white-0-75: transparentize($white-0, .25);
 
 //** black colors **//
 $black-0: #001f25;
-$black-1: #1F1F1F;
+$black-1: lighten($black-0, 5);
 $black-2: #252525;
 $lightenBlack: lighten( $black-1, 7.5);
 

@@ -38,6 +38,8 @@ button {
   border: none;
   transition: background .3s ease-in-out;
   border-radius: .75em;
+  padding:  .75em 1em;
+
   &:not(:disabled):hover {
     cursor: pointer;
   }
