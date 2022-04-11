@@ -1,6 +1,6 @@
 {
   "locales": [ "fa", "en" ],
-  "defaultLocale": "fa",
+  "defaultLocale": "en",
   "pages": {
     "*": [ "common", "website-info" ],
     "/": [ "home" ]

@@ -1,5 +1,4 @@
 ---
-slug: installing-npm-on-linux-systems
 title: Installing npm on linux systems
 date: 1626874219785
 thumbnail: /images/blogs/linuxmint-npm-nodejs.jpg

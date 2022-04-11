@@ -1,5 +1,4 @@
 ---
-slug: adding-copy-button-to-astro-code-snippets
 title: Adding copy button to astro code snippets
 date: 1645853484300
 thumbnail: /images/blogs/adding-copy-button-to-astro-code-snippets.jpg

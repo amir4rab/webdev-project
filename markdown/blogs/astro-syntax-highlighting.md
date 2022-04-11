@@ -1,5 +1,4 @@
 ---
-slug: astro-syntax-highlighting
 title: Astro syntax highlighting
 date: 1645853424300
 thumbnail: /images/blogs/astro-syntax-highlighting.jpg
