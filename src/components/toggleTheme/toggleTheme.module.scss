@@ -1,0 +1,28 @@
+@import '../../../styles/scss/stylesProvider';
+
+.toggleTheme {
+  background: $background;
+  color: $text;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  display: inline-block;
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 50%;
+    max-height: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+  }
+
+  &:last-child {
+    margin: .5rem;
+  }
+
+  &:hover {
+    background: $secBackground;
+  }
+}
