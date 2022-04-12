@@ -13,7 +13,7 @@ const readMarkdown = async ( url: string ) => {
     const { data } = matter(markdownContent);
     resultArray.push({
       ...data,
-      slug: ( data.title as string ).toLowerCase().replaceAll(' ', '-')
+      slug: ( data.title as string ).toLowerCase().replace(/\s/g, '-')
     } as BlogHeader);
   });
 

@@ -18,7 +18,7 @@ const readMarkdown = async ( url: string ) => {
   
   return ({ header: {
     ...data,
-    slug: ( data.title as string ).toLowerCase().replaceAll(' ', '-')
+    slug: ( data.title as string ).toLowerCase().replace(/\s/g, '-')
   } as BlogHeader, html: htmlContent.toString(), markdown: content });
 }
 
