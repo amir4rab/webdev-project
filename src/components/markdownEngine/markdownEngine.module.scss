@@ -1,0 +1,65 @@
+@import '../../../styles/scss/stylesProvider';
+
+.markdownEngine {
+  padding-top: 2rem;
+  h2 {
+    margin: 1.5rem 0;
+    font-size: 1.75rem;
+  }
+  h3 {
+    margin: 1.25rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  h4 {
+    margin: .5rem 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  h5, h6 {
+    margin: .25rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  p {
+    margin: .25rem 0;
+    line-height: 150%;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+.codeWrapper {
+  position: relative;
+}
+.copyButton {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  background: transparentize( $black-0, .75 );
+  opacity: .75;
+  color: $white-0;
+  transition: opacity .15s ease-in-out, color .15s ease-in-out;
+  svg {
+    display: block;
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    color: $highlight;
+  }
+}
+.code {
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  text-align: left;
+  direction: ltr;
+  line-height: 175%;
+  font-family: monospace !important;
+}
