@@ -1,0 +1,68 @@
+@import '../../../styles/scss/stylesProvider';
+
+.home {
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: calc(50vh + 4rem);
+    background: $black-0;
+  }
+  &::after {
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 50vw;
+    height: calc(50vh + 4rem);
+    position: absolute;
+    opacity: .15;
+  }
+  &:dir(rtl)::after {
+    left: 0;
+    background: linear-gradient(90deg, $highlight, transparent);
+  }
+
+  &:dir(ltr)::after {
+    right: 0;
+    background: linear-gradient(-90deg, $highlight, transparent);
+  }
+}
+
+.content {
+  padding-bottom: 5vh;
+}
+
+.header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  padding: 0;
+  border-radius: 1em;
+  color: $white-0;
+  transition: background .3s ease-in-out, color .3s ease-in-out;
+  position: relative;
+  margin-bottom: 5vh ;
+
+  .title {
+    color: $highlight;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+  }
+  .subtitle {
+    font-weight: 500;
+    font-size: 1.25rem;
+    opacity: .7;
+  }
+}
+
+@include forDesktopUp {
+  .header {
+    padding: 7.5vh 0;
+  }
+}
