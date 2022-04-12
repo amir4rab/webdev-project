@@ -1,0 +1,134 @@
+@import '../../../styles/scss/stylesProvider';
+
+$imageHeight: 40vh;
+
+.blogWrapper {
+
+  overflow: hidden;
+  .img {
+    display: block;
+    left: 0;
+    top: 3rem;
+    width: 100%;
+    height: $imageHeight;
+    object-fit: cover;
+    position: absolute;
+    z-index: -2;
+  }
+  
+  &::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    left: 0rem;
+    top: 3rem;
+    width: 100%;
+    height: $imageHeight;
+    background: linear-gradient(0deg, #000000, rgba(255, 255, 255, 0));
+  }
+
+  .header {
+    position: relative;
+    height: calc($imageHeight - 1rem);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $white-0;
+
+    .backButton {
+      margin-right: .75rem;
+      background: transparent;
+      border-radius: 0;
+      display: block;
+      svg {
+        display: block;
+      };
+      transition: color .15s ease-in-out;
+      padding: 0;
+      font-size: 1.75rem;
+      color: $white-0;
+      &:hover {
+        color: $white-1;
+      }
+      position: absolute;
+      left: 0rem;
+      top: 2rem;
+    }
+
+    .title {
+      z-index: 5;
+      font-size: 2rem;
+      font-weight: 500;
+      padding-bottom: .5rem;
+    }
+    .date {
+      z-index: 5;
+      opacity: .9;
+      font-size: .9rem;
+    }
+  }
+}
+
+.warning {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: transparentize($yellow-0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  svg {
+    display: block;
+    margin: 0 .5rem;
+  }
+}
+.footer {
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  background: $text;
+  color: $background;
+  .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .shareButton {
+    direction: ltr;
+    background: $background;
+    color: $text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: .5rem;
+    }
+    svg {
+      display: block;
+      margin-right: .5rem;
+    }
+    &:disabled {
+      opacity: .5;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+    &:not(:disabled):hover {
+      background: $secBackground;
+    }
+  }
+  .shareButtons, .shareLinks {
+    padding-bottom: .5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .subtitle {
+    padding-bottom: .5rem;
+  }
+  .shareButtons {
+    margin-bottom: 1rem;
+  }
+}
