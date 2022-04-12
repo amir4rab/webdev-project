@@ -1,0 +1,44 @@
+@import '../../../styles/scss/stylesProvider';
+
+.pagination {
+  padding: .5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  display: flex;
+  button {
+    margin: 0 .25rem;
+  }
+  button {
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    font-size: .8rem;
+    color: $background;
+    border: .1rem transparent solid;
+    background: $text;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+    &:not(.active, .moreButton, :disabled):hover {
+      opacity: .8;
+      transform: scale(1.1);
+    }
+    &:not(.active, .moreButton, :disabled):active {
+      opacity: 1;
+      transform: scale(1.01);
+    }
+    &:disabled {
+      opacity: .5;
+    }
+  }
+}
+
+.numButton {
+  &.active {
+    color: $white-0;
+    background: $highlight;
+  }
+}
