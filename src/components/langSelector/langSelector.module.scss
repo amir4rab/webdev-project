@@ -1,0 +1,38 @@
+@import '../../../styles/scss/stylesProvider';
+
+.langSelector {
+  position: relative;
+  .selectButton {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background: $background;
+    color: $text;
+    padding: .5rem;
+    text-transform: capitalize;
+    &:hover {
+      background: $secBackground;
+    }
+  }
+}
+
+.optionsWrapper {
+  position: absolute;
+  top: calc(100% + .25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .5rem;
+  background: $secBackground;
+  border-radius: .75em;
+}
+.option {
+  min-width: 10ch;
+  padding: .5rem;
+  font-size: .8rem;
+  background: $black-0;
+    color: $white-0;
+  text-transform: capitalize;
+  &:not(:last-child) {
+    margin-bottom: .25rem;
+  }
+}
