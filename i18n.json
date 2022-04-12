@@ -3,6 +3,7 @@
   "defaultLocale": "en",
   "pages": {
     "*": [ "common", "website-info" ],
-    "/": [ "home" ]
+    "/": [ "home" ],
+    "/blog/[slug]": [ "blog" ]
   }
 }
