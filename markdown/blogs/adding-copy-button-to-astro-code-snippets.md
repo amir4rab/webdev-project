@@ -7,7 +7,10 @@ tags:
   - markdown
   - javascript
   - webdevelopment
+language: en
 shortInfo: Lets fix the problem of Astro's markdown syntax Highlighting
+titlePer: "اضافه کردن دکمه کپی به استرو"
+shortInfoPer: "بیاید یک مشکل با سینتکس هایلایتینگ استرو رو حل کنیم"
 ---
 
 ## Problem
