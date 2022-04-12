@@ -6,6 +6,9 @@ export type BlogHeader = {
   author: string,
   shortInfo: string,
   tags: string[],
+  titlePer: string,
+  shortInfoPer: string,
+  language: 'fa' | 'en'
 }
 
 export type BlogHeaderArray = BlogHeader[];

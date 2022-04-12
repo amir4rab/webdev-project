@@ -16,7 +16,10 @@ const readMarkdown = async ( url: string ) => {
 
   const htmlContent = unified().use(remarkParse).use(remarkHtml).processSync(content);
   
-  return ({ header: data as BlogHeader, html: htmlContent.toString(), markdown: content });
+  return ({ header: {
+    ...data,
+    slug: ( data.title as string ).toLowerCase().replaceAll(' ', '-')
+  } as BlogHeader, html: htmlContent.toString(), markdown: content });
 }
 
 export default readMarkdown;

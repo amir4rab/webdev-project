@@ -9,7 +9,7 @@ import usePreferColorScheme from '@/hooks/usePreferColorScheme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { t } = useTranslation('website-info')
-  const preferColorScheme = usePreferColorScheme();
+  const _ = usePreferColorScheme();
 
   return (
     <>
