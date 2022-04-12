@@ -1,0 +1,18 @@
+@import '../../styles/scss/stylesProvider';
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem 5vh 2rem;
+  overflow-x: hidden;
+
+  @include forDesktopUp {
+    max-width: $desktopMaxWidth;
+    margin: auto;
+    padding: 4rem 0 5vh 0;
+  }
+}
+
+.title {
+  color: $highlight;
+}
