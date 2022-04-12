@@ -1,0 +1,79 @@
+@import '../../../styles/scss/stylesProvider';
+
+.blog {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  border-radius: 1em;
+  padding: 1rem;
+  display: flex;
+  background: $black-1;
+  justify-content: space-between;
+  color: $white-0;
+  flex-direction: column;
+
+  .imageWrapper {
+    width: 100%;
+    img {
+      border-radius: 1em;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    
+    .title {
+      font-weight: 500;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    .description {
+      opacity: .7;
+    }
+    .actions {
+      padding-top: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .moreInfo {
+        opacity: .75;
+      }
+
+      .linkButton {
+        color: $white-0;
+        background: $highlight;
+        font-weight: 500;
+        &:hover {
+          background: darken($highlight-color, 5);
+        }
+      }
+    }
+  }
+}
+
+@include forDesktopUp {
+  .blog {
+    flex-direction: row;
+    .imageWrapper, .content {
+      width: 50%;
+    }
+    .content .title {
+      font-size: 1.75rem;
+    }
+  }
+}
