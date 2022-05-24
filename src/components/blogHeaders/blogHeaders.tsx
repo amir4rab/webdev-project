@@ -20,7 +20,7 @@ function BlogHeaders({ blogHeaderArray }: Props) {
       { blogHeaderArray.map( blog => (
         <article className={ classes.blog } key={ blog.slug }>
           <div className={ classes.imageWrapper }>
-            <img src={ blog.thumbnail } alt={ blog.thumbnail } />
+            <img src={ blog.thumbnail } alt={ blog.thumbnail } loading='lazy' />
           </div>
           <div className={ classes.content }>
             <h2 className={ classes.title }>
