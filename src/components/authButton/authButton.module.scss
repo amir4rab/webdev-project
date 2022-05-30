@@ -1,0 +1,12 @@
+@import '../../../styles/scss/stylesProvider';
+
+.authButton {
+  margin: 0 .5rem;
+  color: $white-0;
+  background: $highlight;
+  font-weight: 500;
+  font-size: .8rem;
+  &:hover {
+    background: darken($highlight-color, 5);
+  }
+}
