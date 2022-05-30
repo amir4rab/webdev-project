@@ -21,6 +21,7 @@
       "@/backend-utils/*": ["src/utils/backend/*"],
       "@/hooks/*": ["src/hooks/*"],
       "@/layout/*": ["src/layout/*"],
+      "@/db/*": ["src/db/*"],
       "@/styles/*": ["scss/*"],
       "@/types/*": ["src/types/*"],
     }

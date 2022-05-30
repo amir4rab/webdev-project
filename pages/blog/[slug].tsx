@@ -31,13 +31,15 @@ const PaginatedHome:NextPage<BlogProps> = ( props ) => {
 
 export const getStaticProps: GetStaticProps<BlogProps> = async (context) => {
   const { header, html, markdown } = await readMarkdown('markdown/blogs/' + context.params!.slug as string + '.md');
+  const { slug } = header;
 
   return ({
     props: {
       blogHeader: header,
       markdownContent: html,
       rawMarkdown: markdown
-    }
+    },
+    revalidate: 60
   })
 }
 
