@@ -42,7 +42,7 @@ const BlogWrapper = ({ blogHeader, markdownContent, rawMarkdown }:BlogProps) => 
   return (
     <>
       <article dir={ blogHeader.language === 'fa' ? 'rtl' : 'ltr' } className={ classes.blogWrapper }>
-        <img src={ blogHeader?.thumbnail } alt={ blogHeader.shortInfo } className={ classes.img } />
+        <img loading='lazy' src={ blogHeader?.thumbnail } alt={ blogHeader.shortInfo } className={ classes.img } />
         <header className={ classes.header }>
           <button aria-label='back button' onClick={ () => router.back() } className={ classes.backButton }>
             <IoArrowBack />

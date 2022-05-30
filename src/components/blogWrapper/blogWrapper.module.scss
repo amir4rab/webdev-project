@@ -6,6 +6,7 @@ $imageHeight: 40vh;
 
   overflow: hidden;
   .img {
+    aspect-ratio: 16 / 9;
     display: block;
     left: 0;
     top: 3rem;
@@ -24,7 +25,7 @@ $imageHeight: 40vh;
     top: 3rem;
     width: 100%;
     height: $imageHeight;
-    background: linear-gradient(0deg, #000000, rgba(255, 255, 255, 0));
+    background: linear-gradient(0deg, #000000, #00000000);
   }
 
   .header {
