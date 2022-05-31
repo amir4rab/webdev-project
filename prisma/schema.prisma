@@ -56,6 +56,6 @@ model Comment {
   user          User @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId        String
   text          String
-  blogSlug      String @unique
+  blogSlug      String
   commentId     String @id @default(cuid())
 }
