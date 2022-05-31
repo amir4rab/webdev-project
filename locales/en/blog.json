@@ -3,5 +3,8 @@
   "shareUrl": "Share Url",
   "orShareOn": "Or Share on:",
   "helpFullContent": "have you found this blog helpful?",
-  "notAvailableInLang": "Sorry this blog is not available in English!"
-}
+  "notAvailableInLang": "Sorry this blog is not available in English!",
+  "comments": "comments",
+  "loginToSubmitComment": "Login to submit comment",
+  "noComments": "Sorry there's no comment for this post"
+} 
