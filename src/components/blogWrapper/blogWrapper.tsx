@@ -10,9 +10,11 @@ import classes from './blogWrapper.module.scss';
 
 // types
 import { BlogHeader } from '@/types/blogHeader';
+import { DisplayedComment } from '@/types/displayedComment';
 
 // components
 import MarkdownEngine from '../markdownEngine/markdownEngine';
+import Comments from '../comments';
 
 // util functions
 import generateDate from '@/frontend-utils/generateData';
@@ -27,9 +29,10 @@ export interface BlogProps {
   blogHeader: BlogHeader;
   markdownContent: string;
   rawMarkdown: string;
+  comments: DisplayedComment[]
 }
 
-const BlogWrapper = ({ blogHeader, markdownContent, rawMarkdown }:BlogProps) => {
+const BlogWrapper = ({ blogHeader, markdownContent, rawMarkdown, comments=[] }:BlogProps) => {
   const { t, lang } = useTranslation('blog')
   const { canShare, share } = useBrowserShare();
   const router = useRouter();
@@ -63,6 +66,7 @@ const BlogWrapper = ({ blogHeader, markdownContent, rawMarkdown }:BlogProps) => 
         }
         <MarkdownEngine rawMarkdown={ rawMarkdown } />
       </article>
+      <Comments blogSlug={ blogHeader.slug } comments={ comments }/>
       <footer className={ classes.footer }>
         <p className={ classes.title }>
           { t('helpFullContent') }

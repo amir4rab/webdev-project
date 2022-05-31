@@ -5,6 +5,7 @@ import classes from './navbar.module.scss';
 import useTranslation from 'next-translate/useTranslation';
 import LangSelector from '../langSelector';
 import Link from 'next/link';
+import AuthButton from '../authButton';
 
 const Navbar = () => {
   const { t } = useTranslation('common');
@@ -18,6 +19,7 @@ const Navbar = () => {
           </p>
         </Link>
         <div className={ classes.links }>
+          <AuthButton />
           <LangSelector />
           <ToggleTheme />
         </div>
