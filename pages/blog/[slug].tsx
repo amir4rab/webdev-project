@@ -8,6 +8,7 @@ import readMarkdown from '@/backend-utils/readMarkdown';
 
 // components end types //
 import BlogWrapper, { BlogProps } from '@/components/blogWrapper';
+import { getCommentsByBlogSlug } from '@/db/prisma';
 
 const PaginatedHome:NextPage<BlogProps> = ( props ) => {
   return (
@@ -31,15 +32,15 @@ const PaginatedHome:NextPage<BlogProps> = ( props ) => {
 
 export const getStaticProps: GetStaticProps<BlogProps> = async (context) => {
   const { header, html, markdown } = await readMarkdown('markdown/blogs/' + context.params!.slug as string + '.md');
-  const { slug } = header;
+  const comments = await getCommentsByBlogSlug(context.params!.slug as string);
 
   return ({
     props: {
       blogHeader: header,
       markdownContent: html,
-      rawMarkdown: markdown
-    },
-    revalidate: 60
+      rawMarkdown: markdown,
+      comments: comments
+    }
   })
 }
 

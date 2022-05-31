@@ -21,7 +21,7 @@ const PaginatedHome:NextPage<PageProps> = ({ blogHeaderArray = [], currentPage, 
 }
 
 export const getStaticProps: GetStaticProps<PageProps> = async (context) => {
-  const response = await readFiles('markdown/blogs', parseInt( context.params?.page as string ), 5 )
+  const response = await readFiles('markdown/blogs', parseInt( context.params?.page as string ), 5 );
 
   return ({
     props: {
